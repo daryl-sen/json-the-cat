@@ -14,7 +14,7 @@ const fetchBreedDescription = function(breed, callback) {
     if (parsedBody.length === 0) {
       callback(`Sorry, I couldn't find a cat breed '${breed}'. Perhaps you'd like a dog instead?`, null);
     } else {
-      callback(null, parsedBody[0].description);
+      callback(null, parsedBody[0].description.trim());
     }
   });
 };
